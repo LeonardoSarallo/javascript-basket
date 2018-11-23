@@ -33,7 +33,7 @@ var giocatori = [];
 for (var i = 0; i < 10; i++)
 {
   var nuovoGiocatore = {
-    'codiceGiocatoreUnivoco': makeid() + makeid2(),
+    'codiceGiocatoreUnivoco': randomUnivoco() + randomUnivoco2(),
     'numeroPunti': getRandomNumber(10, 40),
     'numeroRimbalzi': getRandomNumber(5, 20),
     'falli': getRandomNumber(5, 15),
@@ -48,7 +48,7 @@ function getRandomNumber(min, max)
   return newRandomNumber;
 }
 
-function makeid() {
+function randomUnivoco() {
   var text = "";
   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -57,7 +57,7 @@ function makeid() {
 
   return text;
 }
-function makeid2() {
+function randomUnivoco2() {
   var text = "";
   var possible = "0123456789";
 
