@@ -33,7 +33,7 @@ var giocatori = [];
 for (var i = 0; i < 100; i++)
 {
   var nuovoGiocatore = {
-    'codiceGiocatoreUnivoco': randomUnivoco() + randomUnivoco2(),
+    'codiceGiocatoreUnivoco': 'AAA111',
     'numeroPunti': getRandomNumber(10, 40),
     'numeroRimbalzi': getRandomNumber(5, 20),
     'falli': getRandomNumber(5, 15),
@@ -59,7 +59,6 @@ function randomUnivoco() {
 
   return text;
 
-
 }
 function randomUnivoco2() {
   var text = "";
@@ -71,14 +70,16 @@ function randomUnivoco2() {
   return text;
 
 }
-
+var contatore = 0;
 var trovato = false;
-while (trovato = false; giocatori.lenght)
+
+while (trovato = false; contatore < giocatori.length)
 {
-  var richiestaCodice = prompt();
+  var richiestaCodice = prompt('inserisci il codice');
   if (richiestaCodice == giocatore.codiceGiocatoreUnivoco)
   {
     trovato = true;
-    document.writeln(giocatore)
+    document.writeln(giocatore);
   }
+  contatore++;
 }
