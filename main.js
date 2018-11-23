@@ -30,14 +30,15 @@
 
 var giocatori = [];
 
-for (var i = 0; i < 10; i++)
+for (var i = 0; i < 100; i++)
 {
   var nuovoGiocatore = {
     'codiceGiocatoreUnivoco': randomUnivoco() + randomUnivoco2(),
     'numeroPunti': getRandomNumber(10, 40),
     'numeroRimbalzi': getRandomNumber(5, 20),
     'falli': getRandomNumber(5, 15),
-    'percentualeSuccessoTiriDuePunti': getRandomNumber(70,80) + '%',
+    'percentualeSuccessoTiriDuePunti': getRandomNumber(70, 80) + '%',
+    'percentualeSuccessoTiriTrePunti': getRandomNumber(20, 40) + '%'
   }
   giocatori.push(nuovoGiocatore);
 }
@@ -52,17 +53,32 @@ function randomUnivoco() {
   var text = "";
   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-  for (var i = 0; i < 3; i++)
+  for (var i = 0; i < 3; i++){
     text += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
 
   return text;
+
+
 }
 function randomUnivoco2() {
   var text = "";
   var possible = "0123456789";
 
-  for (var i = 0; i < 3; i++)
+  for (var i = 0; i < 3; i++){
     text += possible.charAt(Math.floor(Math.random() * possible.length));
-
+  }
   return text;
+
+}
+
+var trovato = false;
+while (trovato = false; giocatori.lenght)
+{
+  var richiestaCodice = prompt();
+  if (richiestaCodice == giocatore.codiceGiocatoreUnivoco)
+  {
+    trovato = true;
+    document.writeln(giocatore)
+  }
 }
