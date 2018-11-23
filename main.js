@@ -73,13 +73,16 @@ function randomUnivoco2() {
 var contatore = 0;
 var trovato = false;
 
-while (trovato = false; contatore < giocatori.length)
+while (trovato == false && contatore < giocatori.length)
 {
   var richiestaCodice = prompt('inserisci il codice');
-  if (richiestaCodice == giocatore.codiceGiocatoreUnivoco)
+
+  for 
+
+  if (richiestaCodice == giocatori[i].codiceGiocatoreUnivoco)
   {
     trovato = true;
-    document.writeln(giocatore);
+    document.writeln(nuovoGiocatore);
   }
   contatore++;
 }
