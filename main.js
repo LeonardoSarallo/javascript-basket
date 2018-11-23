@@ -14,3 +14,46 @@
 // Una volta generato il “database”, il programma deve chiedere
 // all’utente di inserire un Codice Giocatore e il programma
 // restituisce le statistiche.
+
+
+
+// var giocatore = {
+//   'codiceGiocatoreUnivoco':
+//   'numeroPunti':
+//   'numeroRimbalzi':
+//   'falli':
+//   'percentualeSuccessoTiriDuePunti':
+//   'percentualeSuccessoTiriTrePunti':
+//
+// }
+
+
+var giocatori = [];
+
+for (var i = 0; i < 10; i++)
+{
+  var nuovoGiocatore = {
+    'codiceGiocatoreUnivoco': makeid(),
+    'numeroPunti': getRandomNumber(10, 40),
+    'numeroRimbalzi': getRandomNumber(5, 20),
+    'falli': getRandomNumber(5, 15),
+    'percentualeSuccessoTiriDuePunti': getRandomNumber(70,80) + '%',
+  }
+  giocatori.push(nuovoGiocatore);
+}
+console.log(giocatori);
+function getRandomNumber(min, max)
+{
+  var newRandomNumber = Math.floor(Math.random()*(max-min+1)+min);
+  return newRandomNumber;
+}
+
+function makeid() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+  for (var i = 0; i < 6; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
