@@ -18,10 +18,10 @@
 
 
 // var giocatore = {
-//   'codiceGiocatoreUnivoco':
-//   'numeroPunti':
-//   'numeroRimbalzi':
-//   'falli':
+//
+//
+//
+//
 //   'percentualeSuccessoTiriDuePunti':
 //   'percentualeSuccessoTiriTrePunti':
 //
@@ -33,7 +33,7 @@ var giocatori = [];
 for (var i = 0; i < 10; i++)
 {
   var nuovoGiocatore = {
-    'codiceGiocatoreUnivoco': makeid(),
+    'codiceGiocatoreUnivoco': makeid() + makeid2(),
     'numeroPunti': getRandomNumber(10, 40),
     'numeroRimbalzi': getRandomNumber(5, 20),
     'falli': getRandomNumber(5, 15),
@@ -50,9 +50,18 @@ function getRandomNumber(min, max)
 
 function makeid() {
   var text = "";
-  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-  for (var i = 0; i < 6; i++)
+  for (var i = 0; i < 3; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+function makeid2() {
+  var text = "";
+  var possible = "0123456789";
+
+  for (var i = 0; i < 3; i++)
     text += possible.charAt(Math.floor(Math.random() * possible.length));
 
   return text;
