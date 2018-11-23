@@ -77,12 +77,16 @@ while (trovato == false && contatore < giocatori.length)
 {
   var richiestaCodice = prompt('inserisci il codice');
 
-  for 
+  for (i = 0; i < giocatori.length; i++)
+  {
+    var codicegiocatore = giocatori[i];
+  }
 
-  if (richiestaCodice == giocatori[i].codiceGiocatoreUnivoco)
+  if (richiestaCodice == codicegiocatore.codiceGiocatoreUnivoco)
   {
     trovato = true;
     document.writeln(nuovoGiocatore);
   }
   contatore++;
 }
+console.log(codicegiocatore.codiceGiocatoreUnivoco);
