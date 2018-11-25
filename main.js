@@ -15,25 +15,12 @@
 // all’utente di inserire un Codice Giocatore e il programma
 // restituisce le statistiche.
 
-
-
-// var giocatore = {
-//
-//
-//
-//
-//   'percentualeSuccessoTiriDuePunti':
-//   'percentualeSuccessoTiriTrePunti':
-//
-// }
-
-
 var giocatori = [];
 
 for (var i = 0; i < 100; i++)
 {
   var nuovoGiocatore = {
-    'codiceGiocatoreUnivoco': 'AAA111',
+    'codiceGiocatoreUnivoco': randomUnivoco() + randomUnivoco2(),
     'numeroPunti': getRandomNumber(10, 40),
     'numeroRimbalzi': getRandomNumber(5, 20),
     'falli': getRandomNumber(5, 15),
@@ -76,17 +63,14 @@ var trovato = false;
 while (trovato == false && contatore < giocatori.length)
 {
   var richiestaCodice = prompt('inserisci il codice');
+  console.log(giocatori[contatore]);
 
-  for (i = 0; i < giocatori.length; i++)
-  {
-    var codicegiocatore = giocatori[i];
-  }
-
-  if (richiestaCodice == codicegiocatore.codiceGiocatoreUnivoco)
+  if (richiestaCodice == giocatori[contatore].codiceGiocatoreUnivoco)
   {
     trovato = true;
-    document.writeln(nuovoGiocatore);
+    document.writeln(giocatori[contatore]);
   }
+
   contatore++;
+
 }
-console.log(codicegiocatore.codiceGiocatoreUnivoco);
